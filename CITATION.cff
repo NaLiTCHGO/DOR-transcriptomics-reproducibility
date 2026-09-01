@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "DOR transcriptomics minimal reproducible code"
+version: "1.0.0"
+type: software
+abstract: >-
+  Privacy-screened analysis and accepted-figure code for a phenotype- and
+  provenance-aware cross-cohort transcriptomic study of diminished ovarian
+  reserve in human ovarian granulosa cells.
+authors:
+  - family-names: "Li"
+    given-names: "Na"
+    affiliation: "Department of Traditional Chinese Medicine, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
+  - family-names: "Di"
+    given-names: "Siyu"
+    affiliation: "Department of Gynecology, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
+  - family-names: "Li"
+    given-names: "Pu"
+    affiliation: "Department of Gynecology, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
+  - family-names: "Zhuang"
+    given-names: "Tingyi"
+    affiliation: "Department of Traditional Chinese Medicine, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
+keywords:
+  - "diminished ovarian reserve"
+  - "granulosa cells"
+  - "RNA sequencing"
+  - "transcriptomics"
+  - "reproducibility"
+  - "heterogeneity"
+  - "pathway enrichment"
+repository-code: "https://github.com/NaLiTCHGO/DOR-transcriptomics-reproducibility"
+date-released: 2026-09-01
