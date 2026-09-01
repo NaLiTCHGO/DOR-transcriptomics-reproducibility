@@ -1,0 +1,73 @@
+module,language,script,role
+M02,PowerShell,code/powershell/M02_01_validate_fastq_and_run_fastp.ps1,Validate 12 FASTQ files and run fastp
+M02,PowerShell,code/powershell/M02_02_summarize_gse274832_raw_qc.ps1,Summarize prespecified raw-QC screens
+M02,PowerShell,code/powershell/M02_03_prepare_gencode50_reference.ps1,Prepare GENCODE v50 GRCh38p14 and Salmon index
+M02,PowerShell,code/powershell/M02_04_quantify_gse274832_salmon.ps1,Quantify six samples with Salmon
+M02,Python,code/python/M02_01_build_gse274832_expression_qc.py,Build gene matrices PCA correlation and marker tables
+M02,R,code/R/M02_01_plot_gse274832_expression_qc.R,Plot expression QC figures
+M02,Python,code/python/M02_02_finalize_gse274832_qc.py,Apply cohort QC gate and freeze sample inclusion
+M03,R,code/R/M03_01_run_gse274832_deseq2.R,DESeq2 DOR-minus-NOR LOSO and official-table validation
+M03,Python,code/python/M03_01_audit_gse274832_candidate_stability.py,Audit FDR candidate robustness
+ENTRY,PowerShell,code/powershell/run_gse274832_from_fastq.ps1,Full FASTQ-to-results entry point
+ENTRY,PowerShell,code/powershell/run_gse274832_from_salmon.ps1,Fast entry point from six quant.sf files
+ENTRY,PowerShell,code/powershell/run_gse274832_m03_only.ps1,Statistical-analysis-only entry point
+M02,PowerShell,code/powershell/M02_GSE193136_01_validate_fastq.ps1,GSE193136 expected-size paired-end and gzip integrity gate
+M02,PowerShell,code/powershell/M02_GSE193136_02_run_fastp.ps1,GSE193136 raw read QC without writing cleaned FASTQ
+M02,Python,code/python/M02_GSE193136_03_summarize_raw_qc.py,Summarize GSE193136 fastp metrics and group age context
+M02,PowerShell,code/powershell/M02_GSE193136_04_run_salmon.ps1,Quantify twelve GSE193136 samples with frozen Salmon index
+M02,Python,code/python/M02_GSE193136_05_build_expression_qc.py,Build GSE193136 gene matrices PCA correlation and tissue-marker QC
+M02,R,code/R/M02_GSE193136_06_plot_expression_qc.R,Plot GSE193136 PCA correlation and marker QC
+M02,Python,code/python/M02_GSE193136_07_finalize_qc.py,Apply GSE193136 M02 sample gate and freeze inclusion
+M03,R,code/R/M03_GSE193136_01_run_age_adjusted_deseq2.R,Age-adjusted primary and unadjusted sensitivity DESeq2 with LOSO
+M03,Python,code/python/M03_GSE193136_02_audit_candidate_stability.py,Audit GSE193136 FDR candidates across LOSO and age adjustment
+ENTRY,PowerShell,code/powershell/run_gse193136_m02_m03.ps1,Full GSE193136 M02-to-M03 entry point
+M02,Python,code/python/M02_GSE193136_04a_review_low_mapping_pilot.py,Review low transcriptome mapping with coverage and granulosa-marker evidence before full quantification
+M02,PowerShell,code/powershell/M02_GSE232306_01_validate_fastq.ps1,GSE232306 expected-size paired-end and gzip integrity gate
+M02,PowerShell,code/powershell/M02_GSE232306_02_run_fastp.ps1,GSE232306 raw read QC without writing cleaned FASTQ
+M02,Python,code/python/M02_GSE232306_03_summarize_raw_qc.py,Summarize GSE232306 fastp metrics by phenotype
+M02,PowerShell,code/powershell/M02_GSE232306_04_run_salmon.ps1,Quantify twelve GSE232306 samples with frozen Salmon index
+M02,Python,code/python/M02_GSE232306_04a_review_mapping_qc.py,Review cohort-wide mapping coverage and granulosa markers
+M02,Python,code/python/M02_GSE232306_05_build_expression_qc.py,Build GSE232306 gene matrices PCA correlation and tissue-marker QC
+M02,R,code/R/M02_GSE232306_06_plot_expression_qc.R,Plot GSE232306 PCA correlation and marker QC
+M02,Python,code/python/M02_GSE232306_07_finalize_qc.py,Apply GSE232306 M02 sample gate and freeze inclusion
+M03,R,code/R/M03_GSE232306_01_run_unadjusted_deseq2.R,Condition-only DESeq2 with leave-one-sample-out stability because age is unavailable
+M03,Python,code/python/M03_GSE232306_02_audit_candidate_stability.py,Audit GSE232306 FDR candidates across leave-one-sample-out fits
+ENTRY,PowerShell,code/powershell/run_gse232306_m02_m03.ps1,Full checkpoint-resumable GSE232306 M02-to-M03 entry point
+M03,PowerShell,code/powershell/M03_GSE232306_03_download_official_fpkm.ps1,Download the GEO-listed author FPKM workbook for independent consistency validation
+M03,JavaScript,code/javascript/M03_GSE232306_03a_inspect_official_fpkm.mjs,Inspect the author FPKM workbook using the bundled spreadsheet runtime
+M04,Python,code/python/M04_01_run_cross_cohort_synthesis.py,Quantify three-cohort direction rank overlap random-effects heterogeneity and gene-level LOCO without a megamatrix
+M04,Python,code/python/M04_02_audit_cross_cohort_results.py,Audit M04 required outputs gene namespace estimand boundaries and no-megamatrix compliance
+ENTRY,PowerShell,code/powershell/run_m04_repro_heterogeneity.ps1,Checkpoint-safe formal entry point for M04 synthesis and independent audit
+M05,R,code/R/M05_01_run_ranked_pathway_convergence.R,Run full-rank cohort-first fgsea with frozen MSigDB 2026.1 Hallmark and Reactome then synthesize pathway convergence
+M05,Python,code/python/M05_02_audit_pathway_convergence.py,Audit M05 resources full-rank inputs fgsea outputs strict-rule recomputation and claim boundaries
+ENTRY,PowerShell,code/powershell/run_m05_pathway_convergence.ps1,Checkpoint-safe formal entry point for M05 fgsea synthesis and independent audit
+M06,Python,code/python/M06_01_run_pathway_loco.py,Run three retained-pair selection to held-out pathway replication rotations and universal LOCO core analysis
+M06,Python,code/python/M06_02_audit_pathway_loco.py,Audit M06 no-leakage selection replication universal-core rules outputs and internal-validation boundaries
+ENTRY,PowerShell,code/powershell/run_m06_pathway_loco.ps1,Checkpoint-safe formal entry point for M06 pathway LOCO and independent audit
+M09,JavaScript,code/javascript/M09_01_build_final_overview.mjs,Build and render the final project overview workbook from locked registries and results
+M09,Python,code/python/M09_02_build_release_and_audit.py,Build final Markdown and lightweight ZIP then audit decision scores modules claims and exclusions
+ENTRY,PowerShell,code/powershell/run_m09_reporting_freeze.ps1,Checkpoint-safe formal entry point for M09 workbook release package and audit
+PUB-FIG2,R,code/R/PUB_FIG2_01_prepare_source_data.R,Prepare and validate direct Figure 2 plotting tables from locked M02/M03 outputs without scientific recomputation
+PUB-FIG2,R,code/R/PUB_FIG2_02_render_candidate.R,Render one 300-dpi Skill 3 Figure 2 QC candidate from direct plotting tables only
+PUB-FIG2,R,code/R/PUB_FIG2_03_automated_qc.R,Run structural and scientific-contract QC for the Figure 2 candidate
+PUB-FIG2,PowerShell,code/powershell/run_pub_fig2_skill3.ps1,Formal traceable entry point for Figure 2 source preparation candidate render and automated QC
+PUB-FIG2,R,code/R/PUB_FIG2_04_hotspot_and_font_qc.R,Generate QC-only Figure 2 hotspot crops and verify Windows grid font resolution without modifying the candidate
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_00_common.R,Shared Skill 3 typography layout warning-capture and candidate-export helpers for Figure 3-5 and S1-S6
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_01_prepare_sources.R,Copy and validate locked M02-M06 direct plotting sources for Figure 3-5 and S1-S6 without scientific recomputation
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_02_render_main.R,Render 300-dpi QC candidates for main Figure 3-5 from the locked batch source package
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_03_render_supp_cohorts.R,Render 300-dpi QC candidates for Supplementary Figure S1-S3 using identity-checked archived VST displays and native column labels
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_04_render_supp_synthesis.R,Render 300-dpi QC candidates for Supplementary Figure S4-S6 from locked M04-M06 tables
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_05_automated_qc.R,Run image structure runtime-warning and locked-science contract checks across the nine batch candidates
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_07_reconstruct_vst_heatmaps.R,Reconstruct and archive S1-S3 Top-30 VST display matrices from preserved Salmon inputs with locked normalized-count and clustered-order identity gates
+PUB-FIGBATCH,PowerShell,code/powershell/run_pub_visual_qc_round4.ps1,Create the focused round-4 batch reconstruct and archive only S1-S3 panel-D VST displays render native column labels carry forward frozen figures and rebuild automated and unified QC
+PUB-RELEASE,Python,code/python/PUB_RELEASE_01_validate_cross_format.py,Validate candidate identity raster geometry DPI LZW PDF dimensions embedded fonts renderability and cross-format content consistency for Figure 2-S6
+PUB-RELEASE,PowerShell,code/powershell/run_pub_figure_release_qc_v1.ps1,Render all final PDFs through Poppler and execute the saved cross-format validation workflow
+PUB-RELEASE,Python,code/python/PUB_RELEASE_02_validate_legends.py,Validate journal title and legend word limits for all ten locked result figures
+PUB-FIGBATCH,PowerShell,code/powershell/run_pub_visual_qc_round6_microrepair.ps1,Render focused Figure 2 header-baseline and Figure S4 count-label and statistical-scope clarification candidates without scientific recomputation
+PUB-RELEASE,PowerShell,code/powershell/run_pub_figure_release_round6_v3.ps1,Create result-figure release revision 3 by rerendering only Figure 2 and Figure S4 and carrying forward the other eight figures byte-identically
+PUB-FIGURE1,Python,code/python/FIGURE1_04_generate_final_submission.py,Generate the final SVG vector PDF 600-dpi PNG LZW TIFF preview and legend from the user-approved v03 layout without manual post-edit
+PUB-FIGURE1,Python,code/python/FIGURE1_05_validate_final_release.py,Validate final Figure 1 geometry fonts raster resolution TIFF compression PDF rendering and equivalence to the approved visual candidate
+PUB-FIGURE1,Python,code/python/FIGURE1_06_run_reproducibility_audit.py,Validate the frozen package and execute an independent temporary-copy one-command regeneration with direct output comparisons
+FIGURE_FINAL_REFRESH,Python,code/final_refresh/Figure_1_and_5_refresh.py,Generate the final language-polished Figure 1 and Figure 5 assets
+FIGURE_FINAL_REFRESH,R,code/final_refresh/OPTIONAL_01_refresh_s1_s3_heatmap_colors.R,Re-render the accepted Figure S1-S3 heatmaps with the locked phenotype palette
+FIGURE_FINAL_REFRESH,R,code/final_refresh/OPTIONAL_02_render_figure4_wording.R,Re-render the accepted main figures after the final Figure 4 wording update

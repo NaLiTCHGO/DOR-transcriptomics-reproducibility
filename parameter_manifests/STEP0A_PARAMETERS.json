@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "status": "PENDING_PRE_RUN_LOCK",
+  "representative_run_count": 4,
+  "subsampling_strategy": null,
+  "classification_thresholds": null,
+  "inconclusive_rule": "Must remain blocking; cannot be converted to PASS",
+  "threads": 4,
+  "notes": "No execution is authorized until null fields are prespecified and the contract is rehashed."
+}
+
