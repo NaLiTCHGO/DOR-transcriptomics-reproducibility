@@ -1,0 +1,38 @@
+{
+  "project": "DOR transcriptomic reproducibility and heterogeneity",
+  "figure": "Figure 1",
+  "release": "DOR_FIGURE1_FINAL_V1_20260825",
+  "visual_status": "Render verified",
+  "entry_script": "code/generate_Figure1.py",
+  "layout_spec": "config/Figure1_layout_spec.json",
+  "source_manifest": "source/Figure1_source_manifest.csv",
+  "environment_file": "environment/Figure1_environment.txt",
+  "run_command": "python code/generate_Figure1.py --package-root .",
+  "stochastic": false,
+  "seed": null,
+  "manual_post_edit_required": false,
+  "helper_scripts": [
+    "code/vendor/render_layout_spec.py",
+    "code/vendor/validate_layout_spec.py",
+    "code/vendor/validate_rendered_output.py",
+    "code/vendor/validate_visual_grammar.py",
+    "code/vendor/validate_reproducibility_package.py",
+    "code/vendor/make_hotspot_crops.py",
+    "code/validate_final_release.py",
+    "code/run_reproducibility_audit.py"
+  ],
+  "declared_outputs": [
+    "outputs/DOR_Figure1_final_v01.svg",
+    "outputs/DOR_Figure1_final_v01.pdf",
+    "outputs/DOR_Figure1_final_v01_600dpi.png",
+    "outputs/DOR_Figure1_final_v01_600dpi.tiff",
+    "outputs/DOR_Figure1_final_v01_preview.png",
+    "outputs/Figure1_legend_final.txt"
+  ],
+  "target_width_mm": 180.0,
+  "target_height_mm": 180.9474,
+  "final_dpi": 600,
+  "render_backend": "Frozen Figure 1 Suite v4.3 SVG renderer plus Inkscape CLI",
+  "layout_origin": "User-approved Figure 1 visual candidate v03",
+  "notes": "All final formats are generated from the same locked layout specification. No GUI-only or manual post-edit is used."
+}

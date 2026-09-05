@@ -94,6 +94,7 @@ build_s5 <- function() {
   display_reactome_pathway <- function(x) {
     cleaned <- clean_pathway(x)
     replacements <- c(
+      "Rrna Processing" = "rRNA processing",
       "Auf1 Hnrnp D0 Binds and Destabilizes Mrna" = "AUF1/HNRNPD destabilizes mRNA",
       "Eukaryotic Translation Initiation" = "Translation initiation",
       "Eukaryotic Translation Elongation" = "Translation elongation",
@@ -179,7 +180,7 @@ build_s6 <- function() {
 
   a <- panel_block(p_context, "A", "Global retained-pair pathway context",
                    "Global ranks and directions are not uniformly reproducible across rotations")
-  b <- panel_block(p_tier, "B", "Frozen strict-pathway robustness tiers",
+  b <- panel_block(p_tier, "B", "Frozen strict-pathway stability tiers",
                    "Universal = survival in all three rotations")
   wrap_plots(list(a, b), design = "AB", widths = c(1.12, 0.88)) +
     plot_annotation(theme = theme(plot.background = element_rect(fill = "white", colour = NA)))

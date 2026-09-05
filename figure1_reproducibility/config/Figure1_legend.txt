@@ -1,0 +1,10 @@
+Figure 1. Study design, evidence provenance, and analytical framework.
+Three core RNA-seq cohorts were analyzed separately after accession-level provenance,
+sample-count, species/tissue identity, and quality-control checks. Cohort-specific DOR-minus-NOR
+effects and leave-one-sample-out influence audits were followed by sequential cross-cohort
+synthesis at the gene, pathway, and held-out leave-one-cohort-out levels. E-MTAB-391 was
+retained as a legacy sensitivity resource and was not pooled into the core RNA-seq synthesis.
+The final interpretation is restricted to internal conditional stability across the same
+public cohorts and does not constitute biomarker, causal, external-validation, or clinical
+evidence. DOR, diminished ovarian reserve; NOR, normal ovarian reserve; LOCO,
+leave-one-cohort-out.

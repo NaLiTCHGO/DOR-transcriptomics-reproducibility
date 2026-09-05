@@ -87,7 +87,7 @@ scientific_body_columns <- function(gt) {
 }
 
 panel_block <- function(body, tag, title, subtitle = NULL, header_height = NULL,
-                        body_anchor_fraction = NULL) {
+                        body_anchor_fraction = NULL, title_fontsize = 8.5) {
   # CONTROLLED_LAYOUT_REPAIR: construct each header from the rendered panel
   # columns. Title/subtitle x=0 is therefore the scientific-body left edge,
   # independent of y-axis text, heatmap row labels or outer plot margins.
@@ -140,7 +140,7 @@ panel_block <- function(body, tag, title, subtitle = NULL, header_height = NULL,
     x = title_x,
     y = grid::unit(0.50, "npc"),
     just = c("left", "centre"),
-    gp = grid::gpar(fontfamily = grid_family, fontface = "bold", fontsize = 8.5, col = "#202020")
+    gp = grid::gpar(fontfamily = grid_family, fontface = "bold", fontsize = title_fontsize, col = "#202020")
   )
   if (body_anchor_fraction > 0) {
     gt <- gtable::gtable_add_grob(

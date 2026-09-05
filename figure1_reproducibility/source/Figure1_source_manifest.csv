@@ -1,0 +1,11 @@
+source_id,package_file,upstream_origin,role,frozen_status,notes
+LAYOUT,config/Figure1_layout_spec.json,Figure 1 v03 user-approved layout,Single source of final geometry and wording,LOCKED,Continuous stages 1-4
+CORE_N,source/frozen_inputs/CORE_RNASEQ_COHORT_SUMMARY.csv,06_locked_results/modules/M01_PROVENANCE_LOCK/v1_CORE_GEO/results/CORE_RNASEQ_COHORT_SUMMARY.csv,Three-N and DOR/NOR counts for three core RNA-seq cohorts,LOCKED,30 independent transcriptomes total
+ETAB391,source/frozen_inputs/E-MTAB-391_PROVENANCE_REPORT.md,06_locked_results/modules/M01_PROVENANCE_LOCK/v1_ETAB391/E-MTAB-391_PROVENANCE_REPORT.md,Legacy resource 28-cycle-sample and 26-subject provenance,LOCKED,Not pooled into core RNA-seq synthesis
+M04,source/frozen_inputs/M04_METHODS_RESULTS_LOCKED_v1.md,06_locked_results/modules/M04_REPRO_HETEROGENEITY/v1/M04_METHODS_RESULTS_LOCKED_v1.md,Gene-level reproducibility and heterogeneity interpretation,LOCKED,Supports cautious gene-level wording
+M05,source/frozen_inputs/M05_RUN_ALIGNMENT.md,06_locked_results/modules/M05_PATHWAY_CONVERGENCE/v1/RUN_ALIGNMENT.md,Pathway convergence analysis role,LOCKED,Full-rank Hallmark and Reactome synthesis
+M06,source/frozen_inputs/M06_RUN_ALIGNMENT.md,06_locked_results/modules/M06_LEAVE_ONE_COHORT_OUT/v1/RUN_ALIGNMENT.md,No-leakage LOCO analysis role,LOCKED,Held-out strict replication
+M09,source/frozen_inputs/DOR_Final_Project_Overview_20260815.md,06_locked_results/modules/M09_REPORTING_FREEZE/v1/results/DOR_Final_Project_Overview_20260815.md,Integrated interpretation and claim boundary,LOCKED,No biomarker causal external-validation or clinical claim
+LEGEND,config/Figure1_legend.txt,Figure 1 v03 visual candidate legend,Final legend source,LOCKED,Generated output is copied from this file
+RENDERER,code/vendor/render_layout_spec.py,research_figure1_suite v4.3,SVG rendering helper,FROZEN_COPY,Project generator remains the entry point
+VALIDATORS,code/vendor/,research_figure1_suite v4.3,Layout text-fit visual-grammar and reproducibility QC,FROZEN_COPY,No mutable desktop skill dependency

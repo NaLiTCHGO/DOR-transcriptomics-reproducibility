@@ -52,11 +52,11 @@ PUB-FIG2,R,code/R/PUB_FIG2_02_render_candidate.R,Render one 300-dpi Skill 3 Figu
 PUB-FIG2,R,code/R/PUB_FIG2_03_automated_qc.R,Run structural and scientific-contract QC for the Figure 2 candidate
 PUB-FIG2,PowerShell,code/powershell/run_pub_fig2_skill3.ps1,Formal traceable entry point for Figure 2 source preparation candidate render and automated QC
 PUB-FIG2,R,code/R/PUB_FIG2_04_hotspot_and_font_qc.R,Generate QC-only Figure 2 hotspot crops and verify Windows grid font resolution without modifying the candidate
-PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_00_common.R,Shared Skill 3 typography layout warning-capture and candidate-export helpers for Figure 3-5 and S1-S6
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_00_common.R,Shared accepted typography layout warning-capture and candidate-export helpers for Figure 3-5 and S1-S6
 PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_01_prepare_sources.R,Copy and validate locked M02-M06 direct plotting sources for Figure 3-5 and S1-S6 without scientific recomputation
-PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_02_render_main.R,Render 300-dpi QC candidates for main Figure 3-5 from the locked batch source package
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_02_render_main.R,Render the accepted Figure 3-5 wording and layout from the locked batch source package
 PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_03_render_supp_cohorts.R,Render 300-dpi QC candidates for Supplementary Figure S1-S3 using identity-checked archived VST displays and native column labels
-PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_04_render_supp_synthesis.R,Render 300-dpi QC candidates for Supplementary Figure S4-S6 from locked M04-M06 tables
+PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_04_render_supp_synthesis.R,Render accepted Supplementary Figure S4-S6 displays from locked M04-M06 tables with final terminology
 PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_05_automated_qc.R,Run image structure runtime-warning and locked-science contract checks across the nine batch candidates
 PUB-FIGBATCH,R,code/R/PUB_FIGBATCH_07_reconstruct_vst_heatmaps.R,Reconstruct and archive S1-S3 Top-30 VST display matrices from preserved Salmon inputs with locked normalized-count and clustered-order identity gates
 PUB-FIGBATCH,PowerShell,code/powershell/run_pub_visual_qc_round4.ps1,Create the focused round-4 batch reconstruct and archive only S1-S3 panel-D VST displays render native column labels carry forward frozen figures and rebuild automated and unified QC
@@ -65,9 +65,18 @@ PUB-RELEASE,PowerShell,code/powershell/run_pub_figure_release_qc_v1.ps1,Render a
 PUB-RELEASE,Python,code/python/PUB_RELEASE_02_validate_legends.py,Validate journal title and legend word limits for all ten locked result figures
 PUB-FIGBATCH,PowerShell,code/powershell/run_pub_visual_qc_round6_microrepair.ps1,Render focused Figure 2 header-baseline and Figure S4 count-label and statistical-scope clarification candidates without scientific recomputation
 PUB-RELEASE,PowerShell,code/powershell/run_pub_figure_release_round6_v3.ps1,Create result-figure release revision 3 by rerendering only Figure 2 and Figure S4 and carrying forward the other eight figures byte-identically
-PUB-FIGURE1,Python,code/python/FIGURE1_04_generate_final_submission.py,Generate the final SVG vector PDF 600-dpi PNG LZW TIFF preview and legend from the user-approved v03 layout without manual post-edit
-PUB-FIGURE1,Python,code/python/FIGURE1_05_validate_final_release.py,Validate final Figure 1 geometry fonts raster resolution TIFF compression PDF rendering and equivalence to the approved visual candidate
-PUB-FIGURE1,Python,code/python/FIGURE1_06_run_reproducibility_audit.py,Validate the frozen package and execute an independent temporary-copy one-command regeneration with direct output comparisons
-FIGURE_FINAL_REFRESH,Python,code/final_refresh/Figure_1_and_5_refresh.py,Generate the final language-polished Figure 1 and Figure 5 assets
+PUB-FIGURE1,Python,code/python/FIGURE1_04_generate_final_submission.py,Compatibility entry point for the self-contained accepted Figure 1 generator
+PUB-FIGURE1,Python,code/python/FIGURE1_05_validate_final_release.py,Compatibility entry point for the self-contained accepted Figure 1 validator
+PUB-FIGURE1,Python,code/python/FIGURE1_06_run_reproducibility_audit.py,Compatibility entry point for the self-contained accepted Figure 1 reproducibility audit
+FIGURE_FINAL_REFRESH,Python,code/final_refresh/Figure_1_and_5_refresh.py,Retirement guard for an obsolete Figure 1 and Figure 5 prototype that must not be used
 FIGURE_FINAL_REFRESH,R,code/final_refresh/OPTIONAL_01_refresh_s1_s3_heatmap_colors.R,Re-render the accepted Figure S1-S3 heatmaps with the locked phenotype palette
-FIGURE_FINAL_REFRESH,R,code/final_refresh/OPTIONAL_02_render_figure4_wording.R,Re-render the accepted main figures after the final Figure 4 wording update
+FIGURE_FINAL_REFRESH,R,code/final_refresh/OPTIONAL_02_render_figure4_wording.R,Retirement guard for the obsolete optional Figure 4 wording wrapper
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/generate_Figure1.py,Generate the accepted Figure 1 vector and 600-dpi raster deliverables from the frozen layout specification
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/validate_final_release.py,Validate accepted Figure 1 geometry fonts formats resolution and visual equivalence
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/run_reproducibility_audit.py,Execute the independent temporary-copy Figure 1 regeneration audit
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/make_hotspot_crops.py,Create focused Figure 1 visual-QC crops
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/render_layout_spec.py,Render Figure 1 from the frozen layout specification
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/validate_layout_spec.py,Validate the Figure 1 layout specification
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/validate_rendered_output.py,Validate rendered Figure 1 outputs
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/validate_reproducibility_package.py,Validate Figure 1 package completeness and provenance
+PUB-FIGURE1-PACKAGE,Python,figure1_reproducibility/code/vendor/validate_visual_grammar.py,Validate Figure 1 visual grammar constraints

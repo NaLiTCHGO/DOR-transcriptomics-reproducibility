@@ -14,7 +14,7 @@ get_optional_arg <- function(key, default) {
 project_root <- normalizePath(get_arg("project-root"), winslash = "/", mustWork = TRUE)
 run_root <- normalizePath(get_arg("run-root"), winslash = "/", mustWork = TRUE)
 skill_root <- normalizePath(get_arg("skill-root"), winslash = "/", mustWork = TRUE)
-source(file.path(project_root, "04_code/R/PUB_FIGBATCH_00_common.R"), local = FALSE)
+source(file.path(run_root, "code/PUB_FIGBATCH_00_common.R"), local = FALSE)
 theme_path <- activate_skill3_theme(skill_root)
 figure_set <- unique(strsplit(toupper(get_optional_arg("figure-set", "ALL")), ",", fixed = TRUE)[[1]])
 figure_set <- trimws(figure_set)
@@ -264,7 +264,7 @@ build_figure4 <- function() {
   b <- panel_block(p_h, "B", "Strict Hallmark convergence",
                    "Negative NES = DOR-down enrichment")
   c <- panel_block(p_counts, "C", "Pathway convergence counts",
-                   "Strict rule: same NES direction, support in at least two cohorts and median |NES| at least 1")
+                   "Strict rule: same NES direction, FDR < 0.05 in at least two cohorts and median |NES| at least 1")
   d <- panel_block(p_scatter, "D", "Pairwise pathway NES correspondence",
                    "All 49 Hallmark and 1,016 Reactome pathways are shown")
   wrap_plots(list(a, c, b, d), design = "AC\nBB\nDD",
@@ -283,9 +283,9 @@ build_figure5 <- function() {
   funnel <- bind_rows(
     summary %>% transmute(collection, held_out_cohort, metric = "Pair-selected", n = retained_pair_selected_n),
     summary %>% transmute(collection, held_out_cohort, metric = "Held-out direction", n = held_out_direction_replication_n),
-    summary %>% transmute(collection, held_out_cohort, metric = "Held-out strict", n = held_out_strict_replication_n)
+    summary %>% transmute(collection, held_out_cohort, metric = "Held-out strict criterion", n = held_out_strict_replication_n)
   )
-  funnel$metric <- factor(funnel$metric, levels = c("Pair-selected", "Held-out direction", "Held-out strict"))
+  funnel$metric <- factor(funnel$metric, levels = c("Pair-selected", "Held-out direction", "Held-out strict criterion"))
   p_funnel <- ggplot(funnel, aes(held_out_cohort, n, fill = metric)) +
     geom_col(position = position_dodge(width = 0.78), width = 0.7) +
     geom_text(aes(label = n), position = position_dodge(width = 0.78), vjust = -0.2,
@@ -297,20 +297,20 @@ build_figure5 <- function() {
     theme(legend.position = "bottom", axis.text.x = element_text(angle = 18, hjust = 1))
 
   rates <- bind_rows(
-    summary %>% transmute(collection, held_out_cohort, metric = "Direction", rate = direction_replication_rate_among_selected),
-    summary %>% transmute(collection, held_out_cohort, metric = "Strict", rate = strict_replication_rate_among_selected)
+    summary %>% transmute(collection, held_out_cohort, metric = "Same direction", rate = direction_replication_rate_among_selected),
+    summary %>% transmute(collection, held_out_cohort, metric = "Strict criterion", rate = strict_replication_rate_among_selected)
   )
-  rates$metric <- factor(rates$metric, levels = c("Direction", "Strict"))
+  rates$metric <- factor(rates$metric, levels = c("Same direction", "Strict criterion"))
   p_rates <- ggplot(rates, aes(held_out_cohort, rate, fill = metric)) +
     geom_col(position = position_dodge(width = 0.72), width = 0.65) +
-    geom_text(aes(y = rate + ifelse(metric == "Strict", 0.075, 0.025),
+    geom_text(aes(y = rate + ifelse(metric == "Strict criterion", 0.075, 0.025),
                   label = percent(rate, accuracy = 1)),
               position = position_dodge(width = 0.72), vjust = 0.5, colour = "#202020",
               family = "Arial", size = 5.4 / ggplot2::.pt) +
     facet_wrap(~collection) +
-    scale_fill_manual(values = c(Direction = "#777777", Strict = "#0072B2"), name = NULL) +
+    scale_fill_manual(values = c(`Same direction` = "#777777", `Strict criterion` = "#0072B2"), name = NULL) +
     scale_y_continuous(limits = c(0, 1.12), labels = percent) +
-    labs(x = NULL, y = "Replication among pair-selected") + theme_pub() +
+    labs(x = NULL, y = "Rate among pair-selected pathways") + theme_pub() +
     theme(legend.position = "bottom", axis.text.x = element_text(angle = 18, hjust = 1))
 
   core <- core %>% arrange(collection, pathway)
@@ -322,7 +322,7 @@ build_figure5 <- function() {
       "Nervous System Development" = "Nervous-system development",
       "Neutrophil Degranulation" = "Neutrophil degranulation",
       "Regulation of Ras by Gaps" = "RAS regulation by GAPs",
-      "Rna Processing" = "RNA processing",
+      "Rrna Processing" = "rRNA processing",
       "Transcriptional Regulation by Runx2" = "RUNX2 transcriptional regulation"
     )
     hit <- match(cleaned, names(replacements))
@@ -364,17 +364,17 @@ build_figure5 <- function() {
     theme(panel.grid = element_blank(), axis.text.x = element_text(angle = 35, hjust = 1, vjust = 1),
           axis.text.y = element_text(size = 6.2))
 
-  a <- panel_block(p_funnel, "A", "LOCO selection and replication",
+  a <- panel_block(p_funnel, "A", "LOCO selection and held-out concordance",
                    "The held-out cohort is excluded from selection")
-  b <- panel_block(p_rates, "B", "Held-out replication rates",
+  b <- panel_block(p_rates, "B", "Held-out criterion rates",
                    "Conditional on retained-pair selection")
-  c <- panel_block(p_core, "C", "Universal internal LOCO core",
+  c <- panel_block(p_core, "C", "Internally stable LOCO pathway set",
                    "1 Hallmark + 7 Reactome pass all rotations")
-  d <- panel_block(p_survival, "D", "Frozen Hallmark survival",
-                   "Only P53 survives all rotations")
-  # Allocate one extra twentieth of the lower row to D. This moves D left and
-  # enlarges its scientific body, correcting the right-heavy lower-row centre
-  # without changing labels, values, order or typography.
+  d <- panel_block(p_survival, "D", "Hallmark stability across LOCO rotations",
+                   "Only P53 survives all rotations", title_fontsize = 8.0)
+  # Retain the visually approved 9:11 lower-row allocation. The slightly longer
+  # September title in D uses a local 8-point header so the wording remains
+  # complete without narrowing the three-column C heatmap.
   wrap_plots(list(a, b, c, d),
              design = "AAAAAAAAAABBBBBBBBBB\nCCCCCCCCCDDDDDDDDDDD",
              heights = c(1, 1.05)) +

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below."
 title: "DOR transcriptomics minimal reproducible code"
-version: "1.0.0"
+version: "1.0.1"
 type: software
 abstract: >-
   Privacy-screened analysis and accepted-figure code for a phenotype- and
@@ -17,6 +17,9 @@ authors:
   - family-names: "Li"
     given-names: "Pu"
     affiliation: "Department of Gynecology, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
+  - family-names: "Sun"
+    given-names: "Luna"
+    affiliation: "Department of Gynecology, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
   - family-names: "Zhuang"
     given-names: "Tingyi"
     affiliation: "Department of Traditional Chinese Medicine, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China"
@@ -28,5 +31,6 @@ keywords:
   - "reproducibility"
   - "heterogeneity"
   - "pathway enrichment"
+  - "research integrity"
 repository-code: "https://github.com/NaLiTCHGO/DOR-transcriptomics-reproducibility"
-date-released: 2026-09-01
+date-released: 2026-09-05

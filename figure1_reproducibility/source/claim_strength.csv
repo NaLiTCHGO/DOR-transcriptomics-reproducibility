@@ -1,0 +1,7 @@
+claim_id,figure_wording,evidence_class,allowed_strength,prohibited_extension,status
+F1CLM01,"Three independently recruited core RNA-seq cohorts",locked_provenance,factual,"Do not call parent clinical N transcriptomes",PASS
+F1CLM02,"Cohort-specific DOR-minus-NOR effects",locked_within_cohort,factual,"Do not imply pooled raw-data analysis",PASS
+F1CLM03,"Weak gene-level reproducibility and high heterogeneity",locked_cross_cohort,cautious,"Do not call consensus genes validated biomarkers",PASS
+F1CLM04,"Selective pathway convergence",locked_pathway,cautious,"Do not equate NES direction with activation/inhibition",PASS
+F1CLM05,"Narrow internal pathway core",locked_LOCO,cautious,"Do not call LOCO external/clinical/prospective validation",PASS
+F1CLM06,"Legacy sensitivity resource not pooled into core synthesis",locked_provenance,factual,"Do not present E-MTAB-391 as a fourth core RNA-seq cohort",PASS

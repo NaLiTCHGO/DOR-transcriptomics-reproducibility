@@ -1,0 +1,11 @@
+source_id,source_path_or_id,role_in_figure,frozen_status,notes
+F1SRC01,06_locked_results/modules/M01_PROVENANCE_LOCK/v1_CORE_GEO/results/CORE_RNASEQ_COHORT_SUMMARY.csv,"Three-N and DOR/NOR counts for the three core cohorts",LOCKED,"Separates recruited/context, omics and independent N."
+F1SRC02,06_locked_results/modules/M00_STEP0A_GATE/v1/STEP0A_REPORT.md,"Species/tissue sanity gate and GSE274832 conflict boundary",LOCKED,PASS_WITH_LIMITATION
+F1SRC03,06_locked_results/modules/M02_COHORT_QC/,"Cohort-specific QC and inclusion",LOCKED,"All three cohorts retained with stated limitations."
+F1SRC04,06_locked_results/modules/M03_WITHIN_COHORT_EFFECTS/,"Cohort-specific DOR-minus-NOR effect tables and LOSO",LOCKED,"No raw-data pooling."
+F1SRC05,06_locked_results/modules/M04_REPRO_HETEROGENEITY/v1/M04_METHODS_RESULTS_LOCKED_v1.md,"Gene-effect reproducibility and heterogeneity",LOCKED,PASS_WITH_LIMITATION
+F1SRC06,06_locked_results/modules/M05_PATHWAY_CONVERGENCE/v1/M05_METHODS_RESULTS_LOCKED_v1.md,"Full-rank pathway convergence",LOCKED,PASS_WITH_LIMITATION
+F1SRC07,06_locked_results/modules/M06_LEAVE_ONE_COHORT_OUT/v1/M06_METHODS_RESULTS_LOCKED_v1.md,"No-leakage pathway LOCO",LOCKED,PASS_WITH_LIMITATION
+F1SRC08,06_locked_results/modules/M01_PROVENANCE_LOCK/v1_ETAB391/E-MTAB-391_PROVENANCE_REPORT.md,"Legacy sensitivity resource boundary",LOCKED,"Not pooled with core RNA-seq synthesis."
+F1SRC09,07_manuscript/submission_prep/20260825_MANUSCRIPT_FIG1_REFERENCE_EXPANSION_V1/baseline/RBE_MANUSCRIPT_v0.3_CITATION_BASELINE.md,"Current manuscript narrative",VERSIONED_BASELINE,"Figure 1 wording must remain consistent with manuscript claims."
+F1SRC10,07_manuscript/submission_prep/20260824_RBE_FIGURE_RELEASE_V1/FIGURE_LEGENDS_EN.md,"Duplication map for Figures 2-S6",V3_CONTENT_LOCK,"Figure 1 must not reproduce detailed result panels."

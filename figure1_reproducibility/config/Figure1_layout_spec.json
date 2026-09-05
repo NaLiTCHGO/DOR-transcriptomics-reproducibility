@@ -1,0 +1,636 @@
+{
+  "schema_version": "1.2",
+  "project_name": "DOR transcriptomic reproducibility and heterogeneity",
+  "figure_role": "Study design, evidence provenance, analytical sequence, and interpretation boundary",
+  "canvas": {
+    "width_px": 1900,
+    "height_px": 1910,
+    "background": "#FFFFFF"
+  },
+  "publication": {
+    "target_width_mm": 180,
+    "stress_test_width_mm": 170,
+    "final_dpi": 600,
+    "recommended_placement": "full-width / two-column"
+  },
+  "styles": {
+    "font_family": "Arial, Helvetica, sans-serif",
+    "text_alignment": {
+      "left_padding_mm_target_low": 3.6,
+      "shared_anchor_tolerance_mm": 0.5
+    }
+  },
+  "palette": {
+    "line": "#53616C",
+    "secondary_line": "#7B8791",
+    "cohort_fill": "#EDF4FB",
+    "cohort_stroke": "#4B7EAF",
+    "cohort_text": "#28547D",
+    "analysis_fill": "#F2F6FA",
+    "analysis_stroke": "#607D99",
+    "analysis_text": "#334F68",
+    "synthesis_fill": "#EFF7F0",
+    "synthesis_stroke": "#5D9561",
+    "synthesis_text": "#3E7445",
+    "integration_fill": "#F2F6F3",
+    "integration_stroke": "#6E8875",
+    "integration_text": "#385B43",
+    "boundary_fill": "#F7F7F6",
+    "boundary_stroke": "#A2A9AF",
+    "boundary_text": "#59636F",
+    "heading_text": "#27323C"
+  },
+  "nodes": [
+    {
+      "id": "H1_inputs",
+      "node_class": "short_label",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 53,
+      "w": 900,
+      "h": 50,
+      "fill": "none",
+      "stroke": "none",
+      "stroke_width": 1.5,
+      "radius": 0,
+      "text_blocks": [
+        {
+          "id": "H1_text",
+          "lines": ["1  COHORT INPUTS AND PROVENANCE"],
+          "font_size": 36,
+          "font_weight": 700,
+          "fill": "#27323C",
+          "x": 80,
+          "y": 85,
+          "text_anchor": "start"
+        }
+      ]
+    },
+    {
+      "id": "N1_GSE274832",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 105,
+      "w": 520,
+      "h": 250,
+      "fill": "#EDF4FB",
+      "stroke": "#4B7EAF",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N1_title",
+          "lines": ["GSE274832"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#28547D",
+          "x": 118,
+          "y": 157,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N1_body",
+          "lines": [
+            "147 clinical context",
+            "6 omics / independent",
+            "3 DOR + 3 NOR",
+            "metadata conflict disclosed"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#365F85",
+          "x": 118,
+          "y": 207,
+          "text_anchor": "start",
+          "line_gap": 1.22
+        }
+      ]
+    },
+    {
+      "id": "N2_GSE193136",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 690,
+      "y": 105,
+      "w": 520,
+      "h": 250,
+      "fill": "#EDF4FB",
+      "stroke": "#4B7EAF",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N2_title",
+          "lines": ["GSE193136"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#28547D",
+          "x": 728,
+          "y": 157,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N2_body",
+          "lines": [
+            "24 recruited",
+            "12 omics / independent",
+            "6 DOR + 6 NOR",
+            "age-adjusted primary model"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#365F85",
+          "x": 728,
+          "y": 207,
+          "text_anchor": "start",
+          "line_gap": 1.22
+        }
+      ]
+    },
+    {
+      "id": "N3_GSE232306",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 1300,
+      "y": 105,
+      "w": 520,
+      "h": 250,
+      "fill": "#EDF4FB",
+      "stroke": "#4B7EAF",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N3_title",
+          "lines": ["GSE232306"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#28547D",
+          "x": 1338,
+          "y": 157,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N3_body",
+          "lines": [
+            "60 recruited",
+            "12 omics / independent",
+            "6 DOR + 6 NOR",
+            "covariates unavailable"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#365F85",
+          "x": 1338,
+          "y": 207,
+          "text_anchor": "start",
+          "line_gap": 1.22
+        }
+      ]
+    },
+    {
+      "id": "N4_core_banner",
+      "node_class": "cohort_banner",
+      "x": 280,
+      "y": 410,
+      "w": 1340,
+      "h": 90,
+      "fill": "#F2F6FA",
+      "stroke": "#607D99",
+      "stroke_width": 2.2,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N4_text",
+          "lines": [
+            "Core RNA-seq analysis: 30 independent transcriptomes",
+            "15 DOR + 15 NOR; cohorts modeled separately"
+          ],
+          "font_size": 30,
+          "font_weight": 700,
+          "fill": "#334F68",
+          "x": 950,
+          "y": 445,
+          "text_anchor": "middle",
+          "line_gap": 1.16
+        }
+      ]
+    },
+    {
+      "id": "N5_legacy",
+      "node_class": "external_capsule",
+      "x": 80,
+      "y": 515,
+      "w": 800,
+      "h": 125,
+      "fill": "#F7F7F6",
+      "stroke": "#A2A9AF",
+      "stroke_width": 1.8,
+      "radius": 24,
+      "text_blocks": [
+        {
+          "id": "N5_text",
+          "lines": [
+            "E-MTAB-391 - legacy sensitivity only",
+            "28 cycle-samples / 26 subjects",
+            "not pooled into core synthesis"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#59636F",
+          "x": 480,
+          "y": 545,
+          "text_anchor": "middle",
+          "line_gap": 1.14
+        }
+      ]
+    },
+    {
+      "id": "H2_execution",
+      "node_class": "short_label",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 660,
+      "w": 720,
+      "h": 50,
+      "fill": "none",
+      "stroke": "none",
+      "stroke_width": 1.5,
+      "radius": 0,
+      "text_blocks": [
+        {
+          "id": "H2_text",
+          "lines": ["2  COHORT-SPECIFIC EXECUTION"],
+          "font_size": 36,
+          "font_weight": 700,
+          "fill": "#27323C",
+          "x": 80,
+          "y": 697,
+          "text_anchor": "start"
+        }
+      ]
+    },
+    {
+      "id": "N6_execution",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 170,
+      "y": 735,
+      "w": 1560,
+      "h": 170,
+      "fill": "#F2F6FA",
+      "stroke": "#607D99",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N6_title",
+          "lines": ["Repeated independently for each core accession"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#334F68",
+          "x": 208,
+          "y": 785,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N6_body",
+          "lines": [
+            "Species/tissue identity and cohort QC",
+            "Salmon/tximport quantification with cohort-specific DESeq2 models",
+            "DOR-minus-NOR effect tables plus leave-one-sample-out influence audits"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#405D76",
+          "x": 208,
+          "y": 830,
+          "text_anchor": "start",
+          "line_gap": 1.17
+        }
+      ]
+    },
+    {
+      "id": "H3_synthesis",
+      "node_class": "short_label",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 995,
+      "w": 900,
+      "h": 52,
+      "fill": "none",
+      "stroke": "none",
+      "stroke_width": 1.5,
+      "radius": 0,
+      "text_blocks": [
+        {
+          "id": "H3_text",
+          "lines": ["3  SEQUENTIAL CROSS-COHORT SYNTHESIS"],
+          "font_size": 36,
+          "font_weight": 700,
+          "fill": "#27323C",
+          "x": 80,
+          "y": 1032,
+          "text_anchor": "start"
+        }
+      ]
+    },
+    {
+      "id": "N7_gene",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 1135,
+      "w": 520,
+      "h": 175,
+      "fill": "#EFF7F0",
+      "stroke": "#5D9561",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N7_title",
+          "lines": ["Gene-level effects"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#3E7445",
+          "x": 118,
+          "y": 1187,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N7_body",
+          "lines": [
+            "Pairwise concordance",
+            "Heterogeneity assessment"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#4B7650",
+          "x": 118,
+          "y": 1240,
+          "text_anchor": "start",
+          "line_gap": 1.20
+        }
+      ]
+    },
+    {
+      "id": "N8_pathway",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 665,
+      "y": 1135,
+      "w": 570,
+      "h": 175,
+      "fill": "#EFF7F0",
+      "stroke": "#5D9561",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N8_title",
+          "lines": ["Pathway convergence"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#3E7445",
+          "x": 703,
+          "y": 1187,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N8_body",
+          "lines": [
+            "Full-rank Hallmark",
+            "and Reactome scores",
+            "Prespecified convergence rule"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#4B7650",
+          "x": 703,
+          "y": 1228,
+          "text_anchor": "start",
+          "line_gap": 1.08
+        }
+      ]
+    },
+    {
+      "id": "N9_loco",
+      "node_class": "information_card",
+      "text_alignment": "left",
+      "x": 1300,
+      "y": 1135,
+      "w": 520,
+      "h": 175,
+      "fill": "#EFF7F0",
+      "stroke": "#5D9561",
+      "stroke_width": 2.3,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N9_title",
+          "lines": ["Held-out LOCO"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#3E7445",
+          "x": 1338,
+          "y": 1187,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N9_body",
+          "lines": [
+            "Retained-pair selection",
+            "Held-out strict criterion"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#4B7650",
+          "x": 1338,
+          "y": 1240,
+          "text_anchor": "start",
+          "line_gap": 1.20
+        }
+      ]
+    },
+    {
+      "id": "H4_interpretation",
+      "node_class": "short_label",
+      "text_alignment": "left",
+      "x": 80,
+      "y": 1410,
+      "w": 760,
+      "h": 50,
+      "fill": "none",
+      "stroke": "none",
+      "stroke_width": 1.5,
+      "radius": 0,
+      "text_blocks": [
+        {
+          "id": "H4_text",
+          "lines": ["4  INTEGRATED INTERPRETATION"],
+          "font_size": 36,
+          "font_weight": 700,
+          "fill": "#27323C",
+          "x": 80,
+          "y": 1447,
+          "text_anchor": "start"
+        }
+      ]
+    },
+    {
+      "id": "N10_integration",
+      "node_class": "integration_card",
+      "text_alignment": "left",
+      "x": 170,
+      "y": 1545,
+      "w": 1560,
+      "h": 150,
+      "fill": "#F2F6F3",
+      "stroke": "#6E8875",
+      "stroke_width": 2.4,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N10_title",
+          "lines": ["Integrated interpretation"],
+          "font_size": 34,
+          "font_weight": 700,
+          "fill": "#385B43",
+          "x": 208,
+          "y": 1595,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N10_body",
+          "lines": [
+            "Cohort-dependent effects with weak gene-level reproducibility",
+            "Selective pathway convergence and a narrow internally stable pathway signal"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#4B6A52",
+          "x": 208,
+          "y": 1643,
+          "text_anchor": "start",
+          "line_gap": 1.17
+        }
+      ]
+    },
+    {
+      "id": "N11_boundary",
+      "node_class": "qualifier_card",
+      "text_alignment": "left",
+      "x": 170,
+      "y": 1760,
+      "w": 1560,
+      "h": 128,
+      "fill": "#F7F7F6",
+      "stroke": "#A2A9AF",
+      "stroke_width": 1.9,
+      "radius": 18,
+      "text_blocks": [
+        {
+          "id": "N11_title",
+          "lines": ["Interpretation boundary"],
+          "font_size": 32,
+          "font_weight": 700,
+          "fill": "#59636F",
+          "x": 208,
+          "y": 1799,
+          "text_anchor": "start"
+        },
+        {
+          "id": "N11_body",
+          "lines": [
+            "Internal conditional stability across the same public cohorts",
+            "No biomarker, causal mechanism, external validation, or clinical claim"
+          ],
+          "font_size": 29,
+          "font_weight": 400,
+          "fill": "#66717B",
+          "x": 208,
+          "y": 1839,
+          "text_anchor": "start",
+          "line_gap": 1.16
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1_cohort274832",
+      "points": [[340, 355], [340, 407]],
+      "stroke": "#53616C",
+      "stroke_width": 2.6,
+      "edge_type": "parallel_evidence_branch",
+      "arrow": true
+    },
+    {
+      "id": "E2_cohort193136",
+      "points": [[950, 355], [950, 407]],
+      "stroke": "#53616C",
+      "stroke_width": 2.6,
+      "edge_type": "parallel_evidence_branch",
+      "arrow": true
+    },
+    {
+      "id": "E3_cohort232306",
+      "points": [[1560, 355], [1560, 407]],
+      "stroke": "#53616C",
+      "stroke_width": 2.6,
+      "edge_type": "parallel_evidence_branch",
+      "arrow": true
+    },
+    {
+      "id": "E4_banner_execution",
+      "points": [[950, 500], [950, 732]],
+      "stroke": "#53616C",
+      "stroke_width": 2.8,
+      "edge_type": "main_flow",
+      "arrow": true
+    },
+    {
+      "id": "E5_execution_gene",
+      "points": [[950, 905], [950, 1090], [340, 1090], [340, 1132]],
+      "stroke": "#53616C",
+      "stroke_width": 2.8,
+      "edge_type": "main_flow",
+      "arrow": true
+    },
+    {
+      "id": "E6_gene_pathway",
+      "points": [[600, 1222.5], [687, 1222.5]],
+      "stroke": "#53616C",
+      "stroke_width": 2.8,
+      "edge_type": "main_flow",
+      "arrow": true
+    },
+    {
+      "id": "E7_pathway_loco",
+      "points": [[1210, 1222.5], [1297, 1222.5]],
+      "stroke": "#53616C",
+      "stroke_width": 2.8,
+      "edge_type": "main_flow",
+      "arrow": true
+    },
+    {
+      "id": "E8_loco_integration",
+      "points": [[1560, 1310], [1560, 1500], [950, 1500], [950, 1542]],
+      "stroke": "#53616C",
+      "stroke_width": 2.8,
+      "edge_type": "evidence_convergence",
+      "arrow": true
+    },
+    {
+      "id": "E9_integration_boundary",
+      "points": [[950, 1695], [950, 1757]],
+      "stroke": "#7B8791",
+      "stroke_width": 2.0,
+      "edge_type": "qualifier_boundary",
+      "arrow": false,
+      "dash": [9, 8]
+    }
+  ]
+}
